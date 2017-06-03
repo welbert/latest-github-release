@@ -1,5 +1,6 @@
 #! /usr/bin/env node
 
+
 var rest = require('./lib/get-json');
 var parser = require('./lib/parser-json');
 var pjson = require('./package.json');
