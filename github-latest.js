@@ -1,9 +1,9 @@
 #! /usr/bin/env node
 
-let rest = require('./lib/get-json');
-let parser = require('./lib/parser-json');
-let pjson = require('./package.json');
-let program = require('commander');
+var rest = require('./lib/get-json');
+var parser = require('./lib/parser-json');
+var pjson = require('./package.json');
+var program = require('commander');
 
 
 program.version(pjson.version)
@@ -30,7 +30,7 @@ if(!program.owner && !program.repository){
 	process.exit();
 }
 
-rest.defineOptions({path: '/repos/'+ program.owner +'/'+program.repository+'/releases/latest'})
+rest.defineOptions({path: '/repos/'+ program.owner + '/' + program.repository +'/releases/latest'})
 
 rest.getJSON((status,response)=>{
   if(status==200){
@@ -43,10 +43,9 @@ rest.getJSON((status,response)=>{
 
     var result = parser.parse(response);
 
-    console.log(result);
-    console.log("\n\r"); //WorkAround: On wget url, on end of string contains a char %11, with this code, %11 going to next line
+    console.log(result + "\n\r"); //WorkAround: On wget url, on end of string contains a char %11, with this code, %11 going to next line
 
   }else{
-    console.log("Fail. Status: "+ status + "; Error: " + response.message);
+    console.log("Fail. Status: " + status + "; Error: " + response.message);
   }
 });

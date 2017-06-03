@@ -27,8 +27,7 @@
   },
   "homepage": "https://github.com/welbert/github-latest#readme",
   "engines": {
-    "node": "~6.9.1",
-    "npm": "~3.10.8"
+    "node": ">= 4.6.x"
   },
   "dependencies": {
     "commander": "^2.9.0"
