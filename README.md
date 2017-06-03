@@ -132,7 +132,9 @@ Download urls:
 
   ```
   
-  ### Get url to download
+  
+  #### Get url to download
+  
   
   - Input: 
     `$ latest-github-release -o zyedidia -r micro -d "linux-arm.tar.gz"`
@@ -142,7 +144,9 @@ Download urls:
 
   ```
   
-  ### Automating installation of programs
+  
+  #### Automating installation of programs
+  
   
   - install-micro.sh
   ```
