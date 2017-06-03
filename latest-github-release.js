@@ -17,9 +17,9 @@ program.version(pjson.version)
 program.on('--help', function() {
 	console.log('  Examples:');
 	console.log('');
-	console.log('    $ github-latest -o welbert -r github-latest');
-	console.log('    $ github-latest -o welbert -r github-latest -n');
-	console.log('    $ github-latest -o welbert -r github-latest -s ".zip"');
+	console.log('    $ latest-github-release -o welbert -r github-latest');
+	console.log('    $ latest-github-release -o welbert -r github-latest -n');
+	console.log('    $ latest-github-release -o welbert -r github-latest -s ".zip"');
 	console.log('');
 });
 
