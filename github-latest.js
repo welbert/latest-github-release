@@ -9,15 +9,16 @@ let program = require('commander');
 program.version(pjson.version)
 	.option('-o, --owner <owner>', 'Owner of repository [Mandatory]')
 	.option('-r, --repository <repository>', 'Name of repository [Mandatory]')
-	.option('-d, --download <suffix>', 'Suffix of download url')
+	.option('-d, --download <suffix>', 'Suffix of download url. Example: "x64.tar.gz"')
 	.option('-t, --tag', 'Show up tag')
+	.option('-n, --notes', 'Show up body of release')
 
 
 program.on('--help', function() {
 	console.log('  Examples:');
 	console.log('');
 	console.log('    $ github-latest -o welbert -r github-latest');
-	console.log('    $ github-latest -o welbert -r github-latest -t');
+	console.log('    $ github-latest -o welbert -r github-latest -n');
 	console.log('    $ github-latest -o welbert -r github-latest -s ".zip"');
 	console.log('');
 });
@@ -34,8 +35,10 @@ rest.defineOptions({path: '/repos/'+ program.owner +'/'+program.repository+'/rel
 rest.getJSON((status,response)=>{
   if(status==200){
     parser.defineOptions({
+    	project: program.repository,
     	tag: program.tag,
-    	download: program.download
+    	download: program.download,
+    	notes: program.notes
     });
 
     var result = parser.parse(response);
