@@ -1,0 +1,36 @@
+{
+  "name": "github-latest",
+  "version": "1.0.0",
+  "description": "Find the latest release of a given GitHub repository",
+  "main": "github-latest.js",
+  "preferGlobal": true,
+  "bin": {
+    "github-latest": "github-latest.js"
+  },
+  "scripts": {
+    "test": "node github-latest.js -o welbert -r github-latest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/welbert/github-latest.git"
+  },
+  "keywords": [
+    "github",
+    "release",
+    "repository",
+    "version"
+  ],
+  "author": "Welbert Serra",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/welbert/github-latest/issues"
+  },
+  "homepage": "https://github.com/welbert/github-latest#readme",
+  "engines": {
+    "node": "~6.9.1",
+    "npm": "~3.10.8"
+  },
+  "dependencies": {
+    "commander": "^2.9.0"
+  }
+}
