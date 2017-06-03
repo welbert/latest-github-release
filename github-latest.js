@@ -44,6 +44,7 @@ rest.getJSON((status,response)=>{
     var result = parser.parse(response);
 
     console.log(result);
+    console.log("\n\r"); //WorkAround: On wget url, on end of string contains a char %11, with this code, %11 going to next line
 
   }else{
     console.log("Fail. Status: "+ status + "; Error: " + response.message);
