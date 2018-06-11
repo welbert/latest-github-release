@@ -1,6 +1,6 @@
 {
   "name": "latest-github-release",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Find the latest release of a given GitHub repository",
   "main": "latest-github-release.js",
   "preferGlobal": true,

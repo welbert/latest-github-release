@@ -57,7 +57,7 @@ $ node latest-github-release.js -h
 
     $ latest-github-release -o welbert -r github-latest
     $ latest-github-release -o welbert -r github-latest -n
-    $ latest-github-release -o welbert -r github-latest -s ".zip"
+    $ latest-github-release -o welbert -r github-latest -d ".zip"
 
 ```
 
