@@ -20,13 +20,13 @@ program.on('--help', function() {
 	console.log('');
 	console.log('    $ latest-github-release -o welbert -r github-latest');
 	console.log('    $ latest-github-release -o welbert -r github-latest -n');
-	console.log('    $ latest-github-release -o welbert -r github-latest -s ".zip"');
+	console.log('    $ latest-github-release -o welbert -r github-latest -d ".zip"');
 	console.log('');
 });
 
 program.parse(process.argv);
 
-if(!program.owner && !program.repository){
+if(!program.owner || !program.repository){
 	console.log("You need to specify an owner and a repository.")
 	process.exit();
 }
